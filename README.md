@@ -119,7 +119,7 @@ Department
 The query would result in:
 
 |Department	|Employee	|Salary|
-|-|
+|-|-|-|
 |Sales	|Jill	|95000|
 |Marketing	|Bob	|76000|
 |Marketing	|Emily	|76000|
