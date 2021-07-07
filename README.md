@@ -27,7 +27,7 @@ When a plus is placed in the local name, everything after the plus symbol will b
 
 These rules only apply to the local-part and do not apply to the domain name.  The domain name can consist of lowercase characters and the ‘.’ symbol.
 
-Example: team1@somwhere.com , team.1+bob@somewhere.com and team1+jill+bob@somewhere.com would all go to the same email address.  team2@somewhere.com and team2@some.where.com would go to different addresses,
+Example: team1@somewhere.com , team.1+bob@somewhere.com and team1+jill+bob@somewhere.com would all go to the same email address.  team2@somewhere.com and team2@some.where.com would go to different addresses,
 
 Given a list of email addresses, return the number of unique email addresses in C#.
 
