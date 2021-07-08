@@ -39,6 +39,8 @@ The method stub for this method is as follows:
         public int NumberOfUniqueEmailAddresses(string[] emails) { }
     }
 ```
+### Answer
+Answer is found in the Solution.cs.
 
 ## Advanced Tic-Tac-Toe
 Design a Tic-Tac-Toe game that can be played on an n x n grid by two players.
@@ -72,6 +74,9 @@ The structure of this game will be as follows:
         }
     }
 ```
+### Answer
+Answer is found in the TicTacToe.cs. MS Tests were created in TicTacToeTests.
+
 ## Duplicate Email Addresses
 Write a SQL query that will return duplicate email addresses in an ‘Employee’ Table
 
@@ -89,6 +94,13 @@ The query for this table would result in
 email
 bob.smith@somwhere.com
 
+### Answer:
+``` SQL
+SELECT email
+FROM Employee
+GROUP BY email 
+HAVING COUNT(*) > 1
+```
 
 ## Department Highest Salaries
 Write a query that will find the employees that have the highest salary for their department. If multiple employees share the same salary, the result should include both employees. The result should include the department name, employee name and the salary.
@@ -124,9 +136,21 @@ The query would result in:
 |Marketing	|Bob	|76000|
 |Marketing	|Emily	|76000|
 
+### Answer
+``` SQL
+SELECT D.NAME, E2.name, E2.salary
+FROM Employee E
+INNER JOIN Department D ON D.departmentId = E.departmentId
+INNER JOIN Employee E2 ON E2.departmentId = D.departmentId 
+GROUP BY D.NAME, E2.name, E2.salary
+HAVING E2.salary = MAX(E.SALARY) 
+ORDER BY E2.salary DESC
+```
 
 ## Camp Site Tracking
-Millcreek Canyon management has asked you to create a table to store campsites, existing reservations, and available reservation dates for each campsite, and they would also like to know the number of visitors to the canyon each day.
+Millcreek Canyon management has asked you to create a table to store campsites, 
+existing reservations, and available reservation dates for each campsite, 
+and they would also like to know the number of visitors to the canyon each day.
 *	Please use relational tables to track this information
 *	Populate the tables with a small amount of dummy data
     *	The data does not have to be accurate to Millcreek canyon real world specifications
@@ -134,3 +158,31 @@ Millcreek Canyon management has asked you to create a table to store campsites, 
     *	Don’t worry about updating information on an existing reservation for this problem
 *	Create a view to show available campsite reservation dates
 *	Create a function that shows the most popular day to visit the canyon
+
+### Answer
+Normally there would be more discovery into the type of data needing to be collected.
+The tables are designed to answer the problem listed above plus a few columns that
+have been nice in my career. Forexample, created and last modified have always been
+great.
+
+Some Assumptions made:
+* Campsites can be reserved for more than 1 day. 
+A start and end dates are provided to block multiple days; cutting down on 
+multiple record entries.
+* Cancelling a reservation does not remove the record but marks the record as cancelled.
+* Ids are big integers. I have seen 32 bit integers hitting max.
+* Metadata column is added incase additional data is needing to be stored
+via JSON or another structure.
+* Users, logs, and security are not added.
+
+The way of presenting the database changes was not clear. I created SQL files
+to be executed on a SQL Server Database.
+
+Order of SQL execution:
+1. Tables.sql
+2. Views.sql
+3. Functions.sql
+4. Sprocs.sql
+5. Data.sql
+
+
