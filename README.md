@@ -40,7 +40,7 @@ The method stub for this method is as follows:
     }
 ```
 ### Answer
-Answer is found in the Solution.cs.
+Answer is found in the [Solution.cs](https://github.com/jamesd321/WillisTowersWatson/blob/main/Solution.cs).
 
 ## Advanced Tic-Tac-Toe
 Design a Tic-Tac-Toe game that can be played on an n x n grid by two players.
@@ -75,7 +75,7 @@ The structure of this game will be as follows:
     }
 ```
 ### Answer
-Answer is found in the TicTacToe.cs. MS Tests were created in TicTacToeTests.
+Answer is found in the [TicTacToe.cs](https://github.com/jamesd321/WillisTowersWatson/blob/main/TicTacToe.cs). MS Tests were created in [TicTacToeTests.cs](https://github.com/jamesd321/WillisTowersWatson/blob/main/TicTacToe.cs).
 
 ## Duplicate Email Addresses
 Write a SQL query that will return duplicate email addresses in an ‘Employee’ Table
@@ -179,10 +179,10 @@ The way of presenting the database changes was not clear. I created SQL files
 to be executed on a SQL Server Database.
 
 Order of SQL execution:
-1. Tables.sql
-2. Views.sql
-3. Functions.sql
-4. Sprocs.sql
-5. Data.sql
+1. [Tables.sql](https://github.com/jamesd321/WillisTowersWatson/blob/main/Tables.sql)
+2. [Views.sql](https://github.com/jamesd321/WillisTowersWatson/blob/main/Views.sql)
+3. [Functions.sql](https://github.com/jamesd321/WillisTowersWatson/blob/main/Functions.sql)
+4. [Sprocs.sql](https://github.com/jamesd321/WillisTowersWatson/blob/main/Sprocs.sql)
+5. [Data.sql](https://github.com/jamesd321/WillisTowersWatson/blob/main/Data.sql)
 
 
