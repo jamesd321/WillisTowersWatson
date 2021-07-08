@@ -75,7 +75,7 @@ The structure of this game will be as follows:
     }
 ```
 ### Answer
-Answer is found in the [TicTacToe.cs](https://github.com/jamesd321/WillisTowersWatson/blob/main/TicTacToe.cs). MS Tests were created in [TicTacToeTests.cs](https://github.com/jamesd321/WillisTowersWatson/blob/main/TicTacToe.cs).
+Answer is found in the [TicTacToe.cs](https://github.com/jamesd321/WillisTowersWatson/blob/main/TicTacToe.cs). MS Tests were created in [TicTacToeTests.cs](https://github.com/jamesd321/WillisTowersWatson/blob/main/TicTacToeTests.cs).
 
 ## Duplicate Email Addresses
 Write a SQL query that will return duplicate email addresses in an ‘Employee’ Table
